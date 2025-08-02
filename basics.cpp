@@ -192,4 +192,243 @@ using namespace std;
 //     cout << "Enter a number : ";
 //     cin >> n;
 //     for(i=0;i<=n;i)
+// }    
+
+//Pattterns
+//Pattern 1
+//1234
+//1234
+//1234
+//1234
+// int main(){
+//     int n=4;
+//     for(int i=1;i<=n;i++){
+//         for(int j=1;j<=4;j++){
+//             cout << j;
+//         }
+//         cout << "\n";   //OR  cout << endl;
+//     }
+
+
+    
+//     return 0;
 // }
+
+//Pattern 2
+//ABCD
+//ABCD
+//ABCD
+//ABCD
+// int main(){
+//     int n=4;
+//     for(int i=1;i<=n;i++){
+//         char ch = 'A';
+//         for(int j=0;j<4;j++){
+//             cout << ch;
+//             ch=ch+1;
+//         }
+//         cout << "\n";   //OR  cout << endl;
+//     }
+//     return 0;
+// }
+// pattern 3
+// ****
+// ****
+// ****
+// ****
+// int main(){
+//     int n=4;
+//     for(int i=0;i<=n;i++){
+//         for(int j=0;j<=4;j++){
+//             cout << "*";
+//         }
+//         cout << endl;
+//     }
+// }
+
+//Pattern 4
+//123
+//456
+//789
+
+// int main(){
+//     int n=3,l=1;
+//     for(int i=0;i<n;i++){
+//         for(int j=1;j<=3;j++){
+//             cout << l;
+//             l=l+1;
+//         }
+//         cout << endl;
+//     } 
+
+//     return 0;
+// }
+
+//Pattern 5
+//ABC
+//DEF
+//GHI
+
+// int main(){
+//     int n=3;
+//     char ch='A';
+//     for(int i=0;i<n;i++){
+//         for(int j=1;j<=3;j++){
+//             cout << ch;
+//             ch =ch+1;
+//         }
+//         cout << endl;
+//     } 
+
+//     return 0;
+// }
+
+
+//Pattern 6
+//*
+//** 
+//*** 
+//****
+
+// int main(){
+//     int n=4,l=0;
+//     for(int i=1;i<=n;i++){
+//     //    l=l+1;
+//         for(int j=1;j<=i;j++){
+//             cout << "*";
+//         }
+//         cout << endl;
+//     }
+// }
+
+//Pattern 7
+//1
+//22
+//333
+//4444
+
+// int main(){
+//     int n=4;
+//     for(int i=1;i<=n;i++){
+//         for(int j=1;j<=i;j++){
+//             cout << i;
+//         }
+//         cout << endl;
+//     }
+//     return 0;
+// }
+
+//Pattern 8
+//A
+//BB
+//CCC
+//DDDD
+
+// int main(){
+//     int n=5;
+//     char ch='A';
+//     for(int i=0;i<n;i++){
+//         for(int j=0;j<i+1;j++){
+//             cout << ch;
+//         }
+//         ch=ch+1;
+//         cout << endl;
+//     }
+
+//     return 0;
+// }
+
+//Pattern 9
+//1
+//12
+//123
+//1234
+
+// int main(){
+//     int n=4;
+//     for(int i=0;i<=n;i++){
+//         for(int j=1;j<=i;j++){
+//             cout << j;
+//         }
+//         cout << endl;
+//     }
+//     return 0;
+// }
+
+//Pattern 10
+//1
+//21
+//321
+//4321
+
+// int main(){
+//     int n=4;
+//     for(int i=1;i<=n;i++){
+//         for(int j=i;j>=1;j--){
+//             cout << j;
+//         }
+//         cout << endl;
+//     }
+//     return 0;
+// }
+
+//Pattern 11
+//1
+//23
+//456
+//78910
+
+// int main(){
+//     int n=4,l=1;
+//     for(int i=1;i<=n;i++){
+//         for(int j=1;j<=i;j++){
+//             cout << l;
+//             l=l+1;
+//         }
+//         cout << endl;
+//     }
+//     return 0;
+// }
+
+//Pattern 12
+// A
+// BA
+// CBA
+// DCBA
+
+// int main(){
+//     char ch='A';
+//     for(char i=ch;i<ch+4;ch++){
+//         for(char j=i;j<=ch;ch--){
+//             cout << j;
+//         }
+//         cout << endl;
+//     }
+//     return 0;
+// }
+
+int main() {
+    int rows = 4; // Adjust the number of rows as needed
+
+    for (int i = 1; i <= rows; ++i) { // Outer loop for rows
+        // Print spaces before the pattern starts
+        for (int j = 1; j <= (rows - i); ++j) {
+            std::cout << " ";
+        }
+
+        // Print characters in increasing order (A, B, C...)
+        char ch1 = 'A';
+        for (int k = 1; k <= i; ++k) {
+            std::cout << (char)(ch1 + k - 1);
+        }
+
+        // Print characters in decreasing order (..., C, B, A)
+        char ch2 = (char)('A' + i - 2); 
+        for (int l = 1; l < i; ++l) {
+            std::cout << (char)(ch2 - l + 1);
+        }
+        std::cout << std::endl; // Move to the next line
+    }
+    return 0;
+}
+
